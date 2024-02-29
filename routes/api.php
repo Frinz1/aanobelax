@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "api" middleware group. Make something great!
+|
+*/
+Route::post('/get', [AuthController::class, 'get']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::put('/{id}', [ProductController::class, 'update']);
+Route::delete('/{id}', [ProductController::class, 'destroy']);
+Route::get('/{id}/edit', [ProductController::class, 'edit']);
+
+Route::group(['middleware' => ['auth:sanctum']], function(){
+    Route::put('/products/{id}', [ProductController::class, 'update']);
+    Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+Route::apiResource('products', ProductController::class);
+Route::post('/logout', [AuthController::class, 'logout']);
+});
+ 
+
+
+
+/*Route::group(['prefix' => 'products'], function () {
+    Route::get('/', [ProductController::class, 'index']);
+    Route::post('/', [ProductController::class, 'store']);
+    Route::get('/{id}', [ProductController::class, 'show']);
+    Route::put('/{id}', [ProductController::class, 'update']);
+    Route::delete('/{id}', [ProductController::class, 'destroy']);
+    Route::get('/{id}/edit', [ProductController::class, 'edit']); // Optional: Route for edit
+});*/

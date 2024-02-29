@@ -1,0 +1,51 @@
+<div class="main-panel">
+    <div class="content-wrapper">
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+
+        </div>
+        {{session()->get('message')}}
+
+        @endif
+        <div class="div-center">
+            <h1 class="font_size">Update Products</h1>
+            <form action="{{url('/update_write_confirm',$popular->id)}}" method="POST">
+                @csrf
+                <div class="div_design">
+                    <label>Product Title </label>
+                    <input class="text_color" name="title" placeholder="Write item title" required
+                        value="{{$product->title}}">
+                </div>
+                <div class="div_design">
+                    <label>Product Description </label>
+                    <input class="text_color" type="text" name="description" placeholder="Write item title" required
+                        value="{{$product->description}}">
+                </div>
+                <div class="div_design">
+                    <label>Product Image </label>
+                    <input class="text_color" type="file" name="image" placeholder="Write item title" required value="">
+                    <img style="margin:auto;" height="100" width="100" src="/product/{{$product->image}}">
+                </div>
+                <div class="div_design">
+                    <label>Product Rating</label>
+                    <input class="text_color" type="number" name="rating" min="1" max="5" step="1" required>
+                    <option value="{{$product->rating}}" selelected="">{{$product->rating}}
+                    </option>
+                </div>
+                <div class="div_design">
+                    <label>Product Genre </label>
+                    <select class="text_color" type="text" name="genre" placeholder="Write item genre" required>
+                        <option value="{{$product->genre}}" selelected="">{{$product->genre}}
+                        </option>
+                        @foreach($category as $category)
+                        <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+                <div class="div_design">
+
+                    <input type="submit" value="Update Product" class="btn btn-primary">
+                </div>
+            </form>
