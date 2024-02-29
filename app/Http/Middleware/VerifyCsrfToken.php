@@ -14,6 +14,17 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/login',
         '/register',
-        '/logout'
+        '/logout',
+        '/add_bookmark/*',
+        '/update_product_confirm/*',
+        // Add more routes that need to be excluded from CSRF verification here:
+        '/add_category',
+        '/add_featured',
+        '/update_featured_confirm/*',
+        '/delete_featured/*',
+        '/delete_category/*',
+        '/add_product',
+        '/update_product_confirm/*',
+        '/delete_product/*',
     ];
 }
