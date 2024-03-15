@@ -217,7 +217,7 @@ code .jspContainer {
                                     <img class="manga-image" src="products/{{$products->image}}"
                                         alt="{{$products->title}}">
                                     <div class="manga-overlay">
-                                        <button class="read-button">Read</button>
+
                                     </div>
                                     <div class="manga-title">{{$products->title}}</div>
                                 </a>
