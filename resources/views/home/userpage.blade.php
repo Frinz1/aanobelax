@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 
 <head>
@@ -11,7 +12,85 @@
     <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all">
 </head>
 <style>
+.manga-content {
+    padding: 0;
+}
 
+.list-wrap {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    /* Add overflow property to enable horizontal scrollbar */
+    max-width: 100%;
+    /* Set a maximum width */
+}
+
+
+code .jspContainer {
+    max-width: 1600px;
+    /* Adjust the max-width as needed */
+    width: 100%;
+    height: 400px;
+    /* Set the height as needed */
+    overflow-x: auto;
+    /* Add overflow property to enable horizontal scrollbar */
+}
+
+.manga-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.manga-list li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.manga-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.manga-link:hover {
+    transform: scale(1.05);
+}
+
+.manga-image {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: skyblue;
+}
+
+.manga-title {
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.manga-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the opacity as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.manga-item:hover .manga-overlay {
+    opacity: 1;
+}
 </style>
 
 <body>
@@ -98,7 +177,6 @@
     </header>
 
     <section class="main">
-
         <div class="mangas">
             @if (Route::has('login'))
             @auth
@@ -110,18 +188,20 @@
                     <div class="jspContainer">
                         <ul class="manga-list">
                             @foreach($product as $products)
-                            <li>
-                                <a href="{{url('product_details',$products->id)}}"><img style="height:300px"
-                                        width="200px" src="products/{{$products->image}}"></a>
-                                <a href="#">{{$products->title}}</a>
+                            <li class="manga-item">
+                                <a href="{{url('product_details',$products->id)}}" class="manga-link">
+                                    <img class="manga-image" src="products/{{$products->image}}"
+                                        alt="{{$products->title}}">
+                                    <div class="manga-overlay">
 
+                                    </div>
+                                    <div class="manga-title">{{$products->title}}</div>
+                                </a>
                             </li>
                             @endforeach
                         </ul>
-
                     </div>
                 </div>
-
             </div>
             @else
             <div class="manga-category">
@@ -132,18 +212,20 @@
                     <div class="jspContainer">
                         <ul class="manga-list">
                             @foreach($product as $products)
-                            <li>
-                                <a href="{{url('/')}}"><img style="height:300px" width="200px"
-                                        src="products/{{$products->image}}"></a>
-                                <a href="#">{{$products->title}}</a>
-
+                            <li class="manga-item">
+                                <a href="{{url('/')}}" class="manga-link">
+                                    <img class="manga-image" src="products/{{$products->image}}"
+                                        alt="{{$products->title}}">
+                                    <div class="manga-overlay">
+                                        <button class="read-button">Read</button>
+                                    </div>
+                                    <div class="manga-title">{{$products->title}}</div>
+                                </a>
                             </li>
                             @endforeach
                         </ul>
-
                     </div>
                 </div>
-
             </div>
             @endauth
             @endif
