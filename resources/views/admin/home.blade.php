@@ -21,7 +21,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+    <link rel="shortcut icon" href="logooo.png" />
     <style type="text/css">
     .div-center {
         text-align: center;
@@ -54,6 +54,40 @@
     .div_design {
         padding-bottom: 15px;
     }
+
+    .text_colorr {
+        width: 100%;
+        /* make the textarea take up the full width of its container */
+        height: 200px;
+        /* increase the height of the textarea */
+        padding: 10px;
+        /* add some padding to make the textarea more comfortable to use */
+        font-size: 16px;
+        /* increase the font size to make the text easier to read */
+    }
+
+    .welcome-container {
+        text-align: center;
+        border: 3px solid white;
+        padding: 20px;
+        height: 610px;
+    }
+
+    /* Styling for the welcome message */
+    .welcome-message {
+        font-size: 40px;
+        color: white;
+        padding-bottom: 20px;
+        margin-top: 220px
+    }
+
+    .sidebar .sidebar-brand-wrapper .sidebar-brand img {
+        width: calc(244px - 120px);
+        max-width: 100%;
+        height: 100px;
+        margin: auto;
+        vertical-align: middle;
+    }
     </style>
 </head>
 
@@ -62,21 +96,14 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="index.html"><img src="" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="logooo.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="logooo.png" alt="logo" /></a>
             </div>
             <ul class="nav">
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navigation</span>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="{{url('view_category')}}">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-playlist-play"></i>
-                        </span>
-                        <span class="menu-title">Dashboard</span>
-                    </a>
-                </li>
+
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
                         aria-controls="ui-basic">
@@ -88,33 +115,15 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{'/view_product'}}">ADD Products</a>
+                            <li class="nav-item"> <a class="nav-link" href="{{'/view_product'}}">Add Products</a>
                             </li>
-                            <li class="nav-item"> <a class="nav-link" href="{{'/show_product'}}">SHOW Products
-                                </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{('/show_product')}}">Show
+                                    Products</a></li>
 
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                        aria-controls="ui-basic">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-laptop"></i>
-                        </span>
-                        <span class="menu-title">Write</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{'/view_write'}}">ADD</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="{{'/show_write'}}">Show
-                                </a></li>
 
-                        </ul>
-                    </div>
-                </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="{{url('view_category')}}">
                         <span class="menu-icon">
@@ -160,12 +169,27 @@
 
 
                     </ul>
-
             </nav>
+            <!-- partial -->
+
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+
+            <!-- partial -->
+
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="welcome-container">
+                        <!-- Welcome message -->
+                        <h1 class="welcome-message">Welcome to Admin Dashboard</h1>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
         <!-- main-panel ends -->
     </div>
-
 
     <!-- page-body-wrapper ends -->
     </div>
