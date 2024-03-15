@@ -11,6 +11,12 @@
     <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all">
 </head>
 <style>
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .container {
     width: 100%;
     height: 50px;
@@ -19,15 +25,16 @@
     position: absolute;
     z-index: 100;
     overflow: hidden;
-    background-color: slategrey;
+
 }
 
 .book-container {
     margin: 20px;
-    padding: 20px;
-    background-color: #f7f7f7;
+    padding: 20px 20px 40px;
+
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 
 .book-container h1 {
@@ -37,51 +44,36 @@
     margin-bottom: 20px;
 }
 
-.book-container p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.book-container .row {
-    display: flex;
-    justify-content: center;
-}
-
-.book-container .col-md-8 {
+.book-container .book-content {
     max-width: 600px;
     width: 100%;
+    margin: 0 auto;
 }
 
-.book-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.book-container .paragraph {
+    font-size: 25px;
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-.book-chapter {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.book-content {
-    margin-bottom: 2rem;
-}
-
-.paragraph {
-    margin-bottom: 1rem;
-}
-
-.line {
-    margin-bottom: 0.5rem;
-}
-
-.line:last-child {
+.book-container .paragraph:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .book-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .book-container h1 {
+        font-size: 20px;
+    }
+
+    .book-container .paragraph {
+        font-size: 16px;
+    }
 }
 </style>
 
@@ -121,16 +113,14 @@
     <div class="book-container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1>{{ $product->title }}</h1>
-                <div>
-
-                    <p>{{ $product->body }}</p>
-
+                <h1 class="book-title">{{ $product->title }}</h1>
+                <div class="book-content">
+                    <p class="paragraph">{{ $product->body }}</p>
                 </div>
             </div>
         </div>
 
-    </div>
+
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
