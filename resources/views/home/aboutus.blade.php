@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Developer</title>
     <link rel="shortcut icon" href="pic-cs_white_logo.png" />
-    <link rel="shortcut icon" type="image " href="assets/image/logo-black.png" />
+    <link rel="icon" type="image/x-icon" href="logooo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -535,7 +535,7 @@
     <header>
         <div class="container">
             <a class="logo" href="#">
-                <img src="logo.png" alt="Logo" style="width: 60px; height: 60px;">
+                <img src="logooo.png" alt="Logo" style="width: 60px; height: 60px;">
             </a>
             <nav>
                 <ul class="navbar">

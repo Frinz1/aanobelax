@@ -7,7 +7,7 @@
     <title>Nobela</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="logooo.png">
     <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all">
 </head>
 <style>
@@ -81,7 +81,7 @@ body {
     <header>
         <div class="container">
             <a class="logo" href="#">
-                <img src="logo.png" alt="Logo" style="width: 60px; height: 60px;">
+                <img src="logooo.png" alt="Logo" style="width: 60px; height: 60px;">
             </a>
             <nav>
                 <ul class="navbar">

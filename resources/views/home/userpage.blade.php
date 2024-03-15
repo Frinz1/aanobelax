@@ -8,7 +8,7 @@
     <title>Nobela</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="icon" type="image/x-icon" href="logooo.png">
     <link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all">
 </head>
 <style>
@@ -97,7 +97,7 @@ code .jspContainer {
     <header>
         <div class="container">
             <a class="logo" href="#">
-                <img src="logo.png" alt="Logo" style="width: 60px; height: 60px;">
+                <img src="logooo.png" alt="Logo" style="width: 60px; height: 60px;">
             </a>
             <nav>
                 <ul class="navbar">
@@ -217,7 +217,7 @@ code .jspContainer {
                                     <img class="manga-image" src="products/{{$products->image}}"
                                         alt="{{$products->title}}">
                                     <div class="manga-overlay">
-
+                                        <button class="read-button">Read</button>
                                     </div>
                                     <div class="manga-title">{{$products->title}}</div>
                                 </a>
