@@ -514,7 +514,7 @@
     .sub-header {
         height: 50vh;
         width: 100%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://i.ytimg.com/vi/s7x3nLO32RM/maxresdefault.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(background.jpg);
         background-position: center;
         background-size: cover;
         text-align: center;
@@ -640,8 +640,7 @@
 
     <div class="footer">
         <h1 class="credit">© 2024<br>
-            Frinz Charles Biasora<br>
-            A final project for Human Computer Interaction 2
+            Nobela<br>
         </h1>
     </div>
 

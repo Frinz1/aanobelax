@@ -529,7 +529,7 @@
     .sub-header {
         height: 50vh;
         width: 100%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://i.pinimg.com/564x/86/b6/59/86b659584ccc8d660248fef17e6dad7b.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(background.jpg);
         background-position: center;
         background-size: cover;
         text-align: center;
