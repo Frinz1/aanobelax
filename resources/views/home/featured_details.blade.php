@@ -173,7 +173,7 @@
 <body>
     <header>
         <div class="container">
-            <a class="logo" href="#">
+            <a class="logo" href="/">
                 <img src="logo.png" alt="Logo" style="width: 60px; height: 60px;">
             </a>
             <img src="logo.png" alt="Logo" style="width: 60px; height: 60px;">
@@ -211,7 +211,7 @@
             <a href="{{url('featured_details',$featured->id)}}"><img style="height:300px" width="200px"
                     src="featured/{{$featured->featured_image}}"></a>
             <div class="manga-info">
-                <a href="#">{{$featured->featured_title}}</a>
+                <a href="/">{{$featured->featured_title}}</a>
                 <h4>{{$featured->featured_description}}</h4>
                 <h4>Rating: {{$featured->featured_rating}}</h4>
                 <h4>Genre: {{$featured->featured_genre}}</h4>

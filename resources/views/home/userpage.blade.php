@@ -96,7 +96,7 @@ code .jspContainer {
 <body>
     <header>
         <div class="container">
-            <a class="logo" href="#">
+            <a class="logo" href="/">
                 <img src="logooo.png" alt="Logo" style="width: 60px; height: 60px;">
             </a>
             <nav>
@@ -140,7 +140,7 @@ code .jspContainer {
 
                     </div>
                     <div class="img-container">
-                        <a href="#"><img src="unggoy.png"></a>
+                        <a href="/"><img src="unggoy.png"></a>
                     </div>
                 </li>
                 <li class="image2">
@@ -149,7 +149,7 @@ code .jspContainer {
                         <h2>Ang Kalabaw at Kambing</h2>
                     </div>
                     <div class="img-container">
-                        <a href="#"><img src="kalabaw.png"></a>
+                        <a href="/"><img src="kalabaw.png"></a>
                     </div>
                 </li>
                 <li class="image3">
@@ -158,7 +158,7 @@ code .jspContainer {
                         <h2>Ang Langgam at Tipaklonng</h2>
                     </div>
                     <div class="img-container2">
-                        <a href="#"><img src="ant.png"></a>
+                        <a href="/"><img src="ant.png"></a>
                     </div>
                 </li>
                 <li class="image4">
@@ -169,7 +169,7 @@ code .jspContainer {
                     </div>
         </div>
         <div class="img-container2">
-            <a href="#"><img src="ant.png"></a>
+            <a href="/"><img src="ant.png"></a>
         </div>
         </li>
         </ul>

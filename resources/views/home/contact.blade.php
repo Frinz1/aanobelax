@@ -551,7 +551,7 @@
     <!-- ito yung navigation bar -->
     <header>
         <div class="container">
-            <a class="logo" href="#">
+            <a class="logo" href="/">
                 <img src="logooo.png" alt="Logo" style="width: 60px; height: 60px;">
             </a>
             <nav>

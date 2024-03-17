@@ -164,7 +164,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="logooo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
