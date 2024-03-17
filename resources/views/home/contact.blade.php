@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Message us</title>
-    <link rel="icon" type="image/x-icon" href="logooo.png">
+    <link rel="shortcut icon" href="pic-cs_white_logo.png" />
+    <link rel="shortcut icon" type="image " href="assets/image/logo-black.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -65,11 +66,19 @@
         overflow: hidden;
     }
 
-
+    .logo {
+        background: url() no-repeat;
+        margin-left: 30px;
+        height: 54px;
+        width: 110px;
+        float: left;
+        background-position: 0 0px;
+    }
 
     .navbar {
 
         float: right;
+        list-style-type: none;
         margin: 5px 20px 0 0
     }
 
@@ -520,7 +529,7 @@
     .sub-header {
         height: 50vh;
         width: 100%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://64.media.tumblr.com/62d7f8330ee6415ec14ed877c23b7a40/666f3e61f91861ea-5a/s1280x1920/9ae91c1e00ec143478400c4bd60c88ce63dcb095.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://i.pinimg.com/564x/86/b6/59/86b659584ccc8d660248fef17e6dad7b.jpg);
         background-position: center;
         background-size: cover;
         text-align: center;
@@ -549,17 +558,16 @@
                 <ul class="navbar">
                     @if (Route::has('login'))
                     @auth
-                    <li class="navbar"><a href="{{url('redirect')}}">HOME</a></li>
-
+                    <li class="navbar"><a href="{{url('/')}}">Home</a></li>
                     <li class="navbar"><a href="{{url('bookmark')}}">Bookmark</a></li>
                     @else
+                    <li class="navbar"><a href="{{url('/')}}">Home</a></li>
                     <li class="navbar"><a href="{{url('/')}}">Bookmark</a></li>
+
                     @endauth
                     @endif
-
                     <li class="navbar"><a href="{{url('aboutus')}}">About Us</a></li>
                     <li class="navbar"><a href="{{url('contact')}}">Contact Us</a></li>
-
                     @if (Route::has('login'))
                     @auth
                     <li class="navbar">
@@ -568,7 +576,6 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-
                     </li>
                     @else
                     <li class="navbar"><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
@@ -584,10 +591,9 @@
         </h1>
     </section>
 
-    <!-- contact section starts  -->
 
     <section class="contact" id="contact">
-        <form action="{{url('')}}">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <h1 style="text-align: center; font-size: 24px;">Message Us</h1>
             <input class="box" name="name" type="text" placeholder="name" required="">
             <input class="box" name="email" type="email" placeholder="your email" required="">
@@ -598,7 +604,7 @@
 
 
         <div class="content">
-            <h3>Nobela| <br>Contact Information</h3>
+            <h3>Nobela <br>Contact Information</h3>
             <div class="icons"> <i class="fas fa-map-marker-alt"></i>
                 <p>Arellano Street, Dagupan City, 2400, Pangasinan</p>
             </div>
@@ -608,9 +614,11 @@
         </div>
     </section>
     <!-- contact section ends -->
+
     <div class="footer">
         <h1 class="credit">© 2024<br>
             Nobela<br>
+
 
         </h1>
     </div>

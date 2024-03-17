@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Developer</title>
     <link rel="shortcut icon" href="pic-cs_white_logo.png" />
-    <link rel="icon" type="image/x-icon" href="logooo.png">
+    <link rel="shortcut icon" type="image " href="assets/image/logo-black.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -69,6 +69,8 @@
     .navbar {
 
         float: right;
+
+        list-style-type: none;
         margin: 5px 20px 0 0;
 
     }
@@ -539,18 +541,18 @@
             </a>
             <nav>
                 <ul class="navbar">
-                    <li class="navbar"><a href="{{url('redirect')}}">HOME</a></li>
                     @if (Route::has('login'))
                     @auth
+                    <li class="navbar"><a href="{{url('/')}}">Home</a></li>
                     <li class="navbar"><a href="{{url('bookmark')}}">Bookmark</a></li>
                     @else
+                    <li class="navbar"><a href="{{url('/')}}">Home</a></li>
                     <li class="navbar"><a href="{{url('/')}}">Bookmark</a></li>
+
                     @endauth
                     @endif
-
                     <li class="navbar"><a href="{{url('aboutus')}}">About Us</a></li>
                     <li class="navbar"><a href="{{url('contact')}}">Contact Us</a></li>
-
                     @if (Route::has('login'))
                     @auth
                     <li class="navbar">
@@ -559,7 +561,6 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-
                     </li>
                     @else
                     <li class="navbar"><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
@@ -569,88 +570,90 @@
                 </ul>
             </nav>
         </div>
-        </div .container { width: 100%; height: 50px; padding: 15px 0; border-bottom: 1px solid rgba(0, 0, 0, .1);
-            position: absolute; z-index: 100; overflow: hidden; } .logo { background: url() no-repeat; margin-left:
-            30px; height: 54px; width: 110px; float: left; background-position: 0 0px; } .navbar { float: right; margin:
-            5px 20px 0 0 } .navbar li { float: left; height: 42px; line-height: 42px; margin: 0 15px; } .navbar li a {
-            text-decoration: none; color: #fff; padding: 10px 0; font-weight: bold; position: relative; } .navbar li
-            a::after { content: '' ; position: absolute; bottom: 0; left: 0; width: 0%; border-bottom: 2px solid #fff;
-            transition: 0.4s; } .navbar li a:hover::after { width: 100%; } .nav-fixed { position: fixed; padding: 5px 0;
-            background: #fff; } .nav-fixed .logo { background-position: 0 -82px; } .nav-fixed li a { color: #000; }
-            .nav-fixed li a::after { border-bottom: 2px solid #000; } .new { background: url(../img/icon.png) no-repeat;
-            width: 30px; height: 22px; background-position: 0 -560px; display: inline-block; margin-left: 5px; } .orz {
-            background: url(../img/orz.png) no-repeat; width: 30px; height: 22px; display: inline-block; margin-left:
-            5px; } </header>
-        <section class="sub-header">
-            <h1 id="bannertxt">
-                ABOUT US
-            </h1>
-        </section>
+    </header>
 
-        <section class="about-us-cards">
-            <div class="wrapper">
-                <h1>Developers</h1>
-                <div class="our_team">
-                    <div class="team_member">
-                        <div class="member_img">
-                            <img src='charles.jpg' alt="My Image">
-                        </div>
-                        <h3>Frinz Charles Biasora</h3>
-                        <span>Back & Front-End Developer</span>
-                        <p>2th year, BSIT Web and Mobile Application</p>
+    </div .container { width: 100%; height: 50px; padding: 15px 0; border-bottom: 1px solid rgba(0, 0, 0, .1); position:
+        absolute; z-index: 100; overflow: hidden; } .logo { background: url() no-repeat; margin-left: 30px; height:
+        54px; width: 110px; float: left; background-position: 0 0px; } .navbar { float: right; margin: 5px 20px 0 0 }
+        .navbar li { float: left; height: 42px; line-height: 42px; margin: 0 15px; } .navbar li a { text-decoration:
+        none; color: #fff; padding: 10px 0; font-weight: bold; position: relative; } .navbar li a::after { content: '' ;
+        position: absolute; bottom: 0; left: 0; width: 0%; border-bottom: 2px solid #fff; transition: 0.4s; } .navbar li
+        a:hover::after { width: 100%; } .nav-fixed { position: fixed; padding: 5px 0; background: #fff; } .nav-fixed
+        .logo { background-position: 0 -82px; } .nav-fixed li a { color: #000; } .nav-fixed li a::after { border-bottom:
+        2px solid #000; } .new { background: url(../img/icon.png) no-repeat; width: 30px; height: 22px;
+        background-position: 0 -560px; display: inline-block; margin-left: 5px; } .orz { background: url(../img/orz.png)
+        no-repeat; width: 30px; height: 22px; display: inline-block; margin-left: 5px; } </header>
+    <section class="sub-header">
+        <h1 id="bannertxt">
+            ABOUT US
+        </h1>
+    </section>
+
+    <section class="about-us-cards">
+        <div class="wrapper">
+            <h1>Developers</h1>
+            <div class="our_team">
+                <div class="team_member">
+                    <div class="member_img">
+                        <img src='charles.jpg' alt="My Image">
                     </div>
-                    <div class="team_member">
-                        <div class="member_img">
-                            <img src="ray (2).jpg" alt="our_team">
-                        </div>
-                        <h3>Jan Ray-Em Valdez</h3>
-                        <span>Front-End Developer</span>
-                        <p>2th year, BSIT Web and Mobile Application</p>
+                    <h3>Frinz Charles Biasora</h3>
+                    <span>Front & Back-End Developer</span>
+
+                    <p>2th year, BSIT Web and Mobile Application</p>
+                </div>
+                <div class="team_member">
+                    <div class="member_img">
+                        <img src="ray (2).jpg" alt="our_team">
                     </div>
-                    <div class="team_member">
-                        <div class="member_img">
-                            <img src="dev3.jpg" alt="our_team">
-                        </div>
-                        <h3>Mark Luis Malicdem</h3>
-                        <span>Back-End Developer</span>
-                        <p>2th year, BSIT Web and Mobile Application</p>
+                    <h3>Jan Ray-Em Valdez</h3>
+                    <span>Front-End Developer</span>
+                    <p>2th year, BSIT Web and Mobile Application</p>
+                </div>
+                <div class="team_member">
+                    <div class="member_img">
+                        <img src="dev3.jpg" alt="our_team">
                     </div>
-                    <div class="team_member">
-                        <div class="member_img">
-                            <img src="arthuro (1).jpg" alt="our_team">
-                        </div>
-                        <h3>Jan Arthuro Zareno</h3>
-                        <span>Back-End Developer</span>
-                        <p>2th year, BSIT Web and Mobile Application</p>
+                    <h3>Mark Luis Malicdem</h3>
+                    <span>Back-End Developer</span>
+                    <p>2th year, BSIT Web and Mobile Application</p>
+                </div>
+                <div class="team_member">
+                    <div class="member_img">
+                        <img src="arthuro (1).jpg" alt="our_team">
                     </div>
-                    <div class="team_member">
-                        <div class="member_img">
-                            <img src="nath.jpg" alt="our_team">
-                        </div>
-                        <h3>Nathaniel Zareno</h3>
-                        <span>Back-End Developer</span>
-                        <p>2th year, BSIT Web and Mobile Application</p>
+                    <h3>Jan Arthuro Zareno</h3>
+                    <span>Back-End Developer</span>
+                    <p>2th year, BSIT Web and Mobile Application</p>
+                </div>
+                <div class="team_member">
+                    <div class="member_img">
+                        <img src="nath.jpg" alt="our_team">
                     </div>
+                    <h3>Nathaniel Zareno</h3>
+                    <span>Back-End Developer</span>
+                    <p>2th year, BSIT Web and Mobile Application</p>
                 </div>
             </div>
-        </section>
-
-        <div class="footer">
-            <h1 class="credit">© 2024<br>
-                Nobela<br>
-
-            </h1>
         </div>
+    </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="app.js"></script>
-        <script>
-        window.addEventListener('scroll', function() {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 0;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-        </script>
+    <div class="footer">
+        <h1 class="credit">© 2024<br>
+            Frinz Charles Biasora<br>
+            A final project for Human Computer Interaction 2
+        </h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+    window.addEventListener('scroll', function() {
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+    })
+    </script>
 </body>
 
 </html>
