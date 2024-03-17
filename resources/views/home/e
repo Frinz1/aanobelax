@@ -5,7 +5,6 @@
     <base href="/public">
     <meta charset="utf-8">
     <title>Nobela</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
     <link rel="icon" type="image/x-icon" href="logooo.png">
@@ -15,6 +14,7 @@
         background-image: url('background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+
     }
 
     /* Your existing styles */
@@ -129,86 +129,40 @@
         padding: 20px;
         /* Increased padding for better visibility */
     }
-
-    /* Transparent Navbar */
-    .navbar {
-        background-color: transparent !important;
-        padding: 0;
-    }
-
-    .navbar-nav .nav-link {
-        color: black !important;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: #f8f9fa !important;
-    }
-
-    .navbar-brand img {
-        width: 100px;
-        height: 90px;
-        margin-right: 120px;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 0 15px;
-    }
-
-    .navbar-collapse {
-        justify-content: flex-end;
-    }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="logooo.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="container">
+            <a class="logo" href="#">
+                <img src="logooo.png" alt="Logo" style="width: 60px; height: 60px;">
+            </a>
+            <nav>
+                <ul class="navbar">
+                    <li class="navbar"><a href="{{url('redirect')}}">Home</a></li>
+                    <li class="navbar"><a href="{{url('bookmark')}}">Bookmark</a></li>
+                    <li class="navbar"><a href="{{url('aboutus')}}">About Us</a></li>
+                    <li class="navbar"><a href="{{url('contact')}}">Contact Us</a></li>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('redirect')}}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('bookmark')}}">Bookmark</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('aboutus')}}">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('contact')}}">Contact Us</a>
-                        </li>
-                        @if (Route::has('login'))
-                        @auth
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
-                        @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('login')}}">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('register')}}">Register</a>
-                        </li>
-                        @endauth
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                    @if (Route::has('login'))
+                    @auth
+                    <li class="navbar">
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+
+                    </li>
+                    @else
+                    <li class="navbar"><a class="btn btn-primary" href="{{route('login')}}">Login</a></li>
+                    <li class="navbar"><a class="btn btn-primary" href="{{route('register')}}">Register</a></li>
+                    @endauth
+                    @endif
+                </ul>
+            </nav>
+        </div>
     </header>
     <br><br><br><br><br><br>
     <div class="center">
@@ -234,9 +188,7 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -600,19 +600,18 @@
         <div class="content">
             <h3>Nobela| <br>Contact Information</h3>
             <div class="icons"> <i class="fas fa-map-marker-alt"></i>
-                <p>180 Greenwich Street, New York, NY 10007
-                    United States</p>
+                <p>Arellano Street, Dagupan City, 2400, Pangasinan</p>
             </div>
             <div class="icons"> <i class="fas fa-phone"></i>
-                <p>(+63) 969.0420.069</p>
+                <p>(+63) 9690420069</p>
             </div>
         </div>
     </section>
     <!-- contact section ends -->
     <div class="footer">
         <h1 class="credit">© 2024<br>
-            Frinz Charles Biasora<br>
-            A final project for Human Computer Interaction 2
+            Nobela<br>
+
         </h1>
     </div>
 
@@ -625,6 +624,32 @@
         header.classList.toggle('scrolling-active', windowPosition);
     })
     </script>
+    <script>
+    // Function to handle form submission
+    function sendMessage(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Assuming here that you want to display a simple alert as a success message
+        alert("Message sent successfully!");
+
+        // Clear the form fields
+        const form = document.querySelector('form');
+        form.reset();
+
+        // Reload the page after a short delay
+        setTimeout(function() {
+            location.reload();
+        }, 2000); // Adjust the delay (in milliseconds) as needed
+    }
+
+    // Get the form element
+    const form = document.querySelector('form');
+
+    // Attach an event listener to the form for the submit event
+    form.addEventListener('submit', sendMessage);
+    </script>
+
 </body>
 
 </html>

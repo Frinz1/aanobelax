@@ -596,7 +596,7 @@
                             <img src='charles.jpg' alt="My Image">
                         </div>
                         <h3>Frinz Charles Biasora</h3>
-                        <span>Back-End Developer</span>
+                        <span>Back & Front-End Developer</span>
                         <p>2th year, BSIT Web and Mobile Application</p>
                     </div>
                     <div class="team_member">
@@ -637,8 +637,8 @@
 
         <div class="footer">
             <h1 class="credit">© 2024<br>
-                Frinz Charles Biasora<br>
-                A final project for Human Computer Interaction 2
+                Nobela<br>
+
             </h1>
         </div>
 

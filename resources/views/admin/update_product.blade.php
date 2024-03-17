@@ -22,7 +22,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+    <link rel="shortcut icon" href="logooo.png" />
     <style type="text/css">
     .div-center {
         text-align: center;
@@ -66,6 +66,14 @@
         font-size: 16px;
         /* increase the font size to make the text easier to read */
     }
+
+    .sidebar .sidebar-brand-wrapper .sidebar-brand img {
+        width: calc(244px - 120px);
+        max-width: 100%;
+        height: 100px;
+        margin: auto;
+        vertical-align: middle;
+    }
     </style>
 </head>
 
@@ -74,21 +82,14 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="index.html"><img src="" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo" href="index.html"><img src="logooo.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="logooo.png" alt="logo" /></a>
             </div>
             <ul class="nav">
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navigation</span>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="{{url('view_category')}}">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-playlist-play"></i>
-                        </span>
-                        <span class="menu-title">Dashboard</span>
-                    </a>
-                </li>
+
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
                         aria-controls="ui-basic">
@@ -108,25 +109,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                        aria-controls="ui-basic">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-laptop"></i>
-                        </span>
-                        <span class="menu-title">Write</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{'/view_featured'}}">ADD Featured</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="{{'/show_featured'}}">SHOW Featured
-                                </a></li>
 
-                        </ul>
-                    </div>
-                </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="{{url('view_category')}}">
                         <span class="menu-icon">
